@@ -2,6 +2,9 @@ material del curso de webflux udemy pragma: https://www.udemy.com/certificate/UC
 
 Seccion 5: API RESTFUL usando RestController https://github.com/saigon32/spring-boot-webflux-apirest
 
+se adjunta la coleccion de postman al proyecto:
+webflux-apirest-v3.postman_collection
+
 listar-v3-route: curl --location 'http://localhost:8080/api/v2/productos'
 
 crear-v3-route:  curl --location 'http://localhost:8080/api/v2/productos' \
