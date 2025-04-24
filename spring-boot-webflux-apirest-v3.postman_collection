@@ -1,0 +1,484 @@
+{
+	"info": {
+		"_postman_id": "44030764-159b-413c-8b44-5c7655ef06dd",
+		"name": "spring-boot-webflux-apirest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3564773"
+	},
+	"item": [
+		{
+			"name": "listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listar-v2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v2/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v2",
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listar-v3-route",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v2/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v2",
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear-v3-route",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"nombre\": \"TV Huawei Pantalla LED 55\",\r\n        \"precio\":700,\r\n        \"categoria\": {\r\n            \"id\": \"680a686f2050b31c47b13a20\",\r\n            \"nombre\": \"Electronico\"\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v2/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v2",
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear-v3-upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v2/productos/upload/abc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v2",
+						"productos",
+						"upload",
+						"abc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear-v3-con-foto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/andres.jurado_pragma/Desktop/pngtree-led-tv-television-screen-vector-png-image_6673700.png"
+						},
+						{
+							"key": "nombre",
+							"value": "TV Panasonic Led 60",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "2000",
+							"type": "text"
+						},
+						{
+							"key": "categoria.id",
+							"value": "680a92b6f91bc24525c708b9",
+							"type": "text"
+						},
+						{
+							"key": "categoria.nombre",
+							"value": "Electronico",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v2/productos/crearConFoto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v2",
+						"productos",
+						"crearConFoto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editar-v3-route",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"nombre\": \"Sony Camara HD CyberShot\",\r\n        \"precio\": 1666.89,\r\n        \"categoria\": {\r\n            \"id\": \"680a6dac3d2dd96bcf95c210\",\r\n            \"nombre\": \"Electronico\"\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v2/productos/680a6dac3d2dd96bcf95c215",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v2",
+						"productos",
+						"680a6dac3d2dd96bcf95c215"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar-v3-route",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"nombre\": \"Sony Camara HD CyberShot\",\r\n        \"precio\": 1666.89,\r\n        \"categoria\": {\r\n            \"id\": \"680a6dac3d2dd96bcf95c210\",\r\n            \"nombre\": \"Electronico\"\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v2/productos/680a7231d0cdb43f1d8df6f6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v2",
+						"productos",
+						"680a7231d0cdb43f1d8df6f6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ver-v3-route",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v3/productos/123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v3",
+						"productos",
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listar-un-producto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/productos/6809545a0afcda0343de8f9a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"productos",
+						"6809545a0afcda0343de8f9a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"TV Samsung LED 55\",\r\n    \"precio\": 1000,\r\n    \"categoria\": {\r\n        \"id\": \"6809545a0afcda0343de8f94\",\r\n        \"nombre\": \"Electronico\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear validando",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\" : \"impresora HP\",\r\n   \"precio\" : \"1000\",\r\n   \"categoria\": {\r\n      \"id\": \"680963ef0f9f272875b912d7\",\r\n      \"nombre\": \"Computacion\"\r\n   }  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"TV Samsung LED 55\",\r\n    \"precio\": 1000,\r\n    \"categoria\": {\r\n        \"id\": \"6809545a0afcda0343de8f94\",\r\n        \"nombre\": \"Electronico\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload v2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"value": "tv.jpg",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "televisor",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "1000",
+							"type": "text"
+						},
+						{
+							"key": "categoria.id",
+							"value": "680961f06beeae165e58f08e",
+							"type": "text"
+						},
+						{
+							"key": "categoria.nombre",
+							"value": "Electronico",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/productos/v2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"productos",
+						"v2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"nombre\": \"Asus Camara HD Digital\",\r\n        \"precio\": 3000,\r\n        \"categoria\": {\r\n            \"id\": \"680957290f87e262e13a4904\",\r\n            \"nombre\": \"Computacion\"\r\n        }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/productos/680957290f87e262e13a4907",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"productos",
+						"680957290f87e262e13a4907"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"nombre\": \"Asus Camara HD Digital\",\r\n        \"precio\": 3000,\r\n        \"categoria\": {\r\n            \"id\": \"680957290f87e262e13a4904\",\r\n            \"nombre\": \"Computacion\"\r\n        }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/productos/68095ae09af64222bbd59768",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"productos",
+						"68095ae09af64222bbd59768"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
